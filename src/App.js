@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div id="quote-box">
-      <header className="App-header">
+      <span id="text">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </span>
     </div>
   );
 }
