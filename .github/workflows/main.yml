@@ -1,6 +1,6 @@
 name: CI/CD
 
-# Controls when the action will run. 
+# Controls when the action will run
 on:
   # Triggers the workflow on push events but only for the main branch
   push:
@@ -8,7 +8,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # A job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -23,18 +23,28 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
       
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
       
       - name: Build
         run: npm run build
 
-  #This workflow contains GitHub Deploy
+  # A job called "deploy"
   deploy:
+    # "deploy" needs "build" to be successful
     needs: build
     runs-on: ubuntu-latest
   
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+      
+      - name: Install dependencies
+        run: npm install
+      
       - name: Deploy to GitHub Pages
         run: |
           git config user.email "jojo@theruntime.org"
