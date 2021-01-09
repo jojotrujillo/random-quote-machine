@@ -25,6 +25,18 @@ jobs:
       
       - name: Install Dependencies
         run: npm install
+      
+      - name: Build
+        run: npm run build
 
+  #This workflow contains GitHub Deploy
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+  
+    steps:
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: |
+          git config user.email "jojo@theruntime.org"
+          git config user.name "jojotrujillo"
+          npm run deploy
