@@ -1,5 +1,6 @@
 # random-quote-machine
-Part of freeCodeCamp's Front End Libraries Projects - Build a Random Quote Machine<br>
+Part of freeCodeCamp's Front End Libraries Projects - Build a Random Quote Machine
+
 ![CI/CD](https://github.com/jojotrujillo/random-quote-machine/workflows/CI/CD/badge.svg)
 
 **Objective:** Build a [CodePen.io](https://codepen.io/) app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/qRZeGZ.
