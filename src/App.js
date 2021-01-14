@@ -18,6 +18,9 @@ function App() {
           Learn React
         </a>
       </span>
+      <span id="author">
+      </span>
+      <button id="new-quote">New quote</button>
     </div>
   );
 }
