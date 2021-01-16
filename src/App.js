@@ -133,7 +133,7 @@ function getQuote() {
   );
 }
 
-$(document).ready(function () {
+$(function () {
   getQuotes().then(() => {
     getQuote();
   });
